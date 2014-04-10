@@ -2,7 +2,10 @@
 <resources>
 
     <string name="app_name">Valore</string>
-    <string name="hello_world">Selamat Datang!</string>
+    <string name="hello_world">Selamat Datang di aplikasi Valore.Aplikasi ini digunakan untuk melihat nilai KHS dan Transkrip nilai mahasiswa.</string>
     <string name="action_settings">Settings</string>
+    <string name="text_npm">Masukkan NPM</string>
+    <string name="title_activity_menu_nilai">Menu</string>
+    <string name="title_activity_mata_kuliah">Mata Kuliah</string>
 
 </resources>

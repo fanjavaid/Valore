@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="menu_nilai">
+        <item>KHS</item>
+        <item>Transkrip</item>
+    </string-array>
+</resources>
