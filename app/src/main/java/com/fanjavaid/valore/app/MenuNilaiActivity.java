@@ -39,7 +39,17 @@ public class MenuNilaiActivity extends Activity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-                Intent intent = new Intent(MenuNilaiActivity.this, MataKuliahActivity.class);
+                String itemValue = (String) listView.getItemAtPosition(position);
+                Intent intent = null;
+
+                if (itemValue.equalsIgnoreCase("khs")) {
+                    intent = new Intent(MenuNilaiActivity.this, SemesterActivity.class);
+                } else if (itemValue.equalsIgnoreCase("transkrip")) {
+                    intent = new Intent(MenuNilaiActivity.this, MataKuliahActivity.class);
+                } else {
+                    intent = new Intent(MenuNilaiActivity.this, MenuNilaiActivity.class);
+                }
+
                 startActivity(intent);
             }
         });

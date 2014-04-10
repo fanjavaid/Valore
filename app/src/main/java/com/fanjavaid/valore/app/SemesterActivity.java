@@ -2,21 +2,20 @@ package com.fanjavaid.valore.app;
 
 import android.app.ActionBar;
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-public class MataKuliahActivity extends Activity {
+public class SemesterActivity extends Activity {
 
     ListView listView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mata_kuliah);
+        setContentView(R.layout.activity_semester);
 
         createList();
 
@@ -24,12 +23,12 @@ public class MataKuliahActivity extends Activity {
         ab.setDisplayHomeAsUpEnabled(true);
     }
 
-    protected void createList() {
-        listView = (ListView) findViewById(R.id.list_matkul);
+    private void createList() {
+        listView = (ListView) findViewById(R.id.list_semester);
 
-        String [] matkuls = {"Matematika", "Algoritma 2", "Pemrograman 2", "Teknik Kompilasi", "Jaringan Syaraf Tiruan"};
+        String [] semester = {"Semester 1", "Semester 2", "Semester 3", "Semester 4"};
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, android.R.id.text1, matkuls);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, android.R.id.text1, semester);
 
         listView.setAdapter(adapter);
     }
@@ -38,7 +37,7 @@ public class MataKuliahActivity extends Activity {
     public boolean onCreateOptionsMenu(Menu menu) {
         
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.mata_kuliah, menu);
+        getMenuInflater().inflate(R.menu.semester, menu);
         return true;
     }
 
@@ -48,7 +47,6 @@ public class MataKuliahActivity extends Activity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
         if (id == R.id.action_settings) {
             return true;
         }
