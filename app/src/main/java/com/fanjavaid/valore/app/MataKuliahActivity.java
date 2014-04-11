@@ -2,12 +2,16 @@ package com.fanjavaid.valore.app;
 
 import android.app.ActionBar;
 import android.app.Activity;
+import android.app.SearchManager;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.SearchView;
 
 public class MataKuliahActivity extends Activity {
 
@@ -36,9 +40,16 @@ public class MataKuliahActivity extends Activity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.mata_kuliah, menu);
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.mata_kuliah, menu);
+
+        // Associate searchable configuration with the SearchView
+        //SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
+        //SearchView searchView = (SearchView) menu.findItem(R.id.action_search).getActionView();
+
+        //searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
+
+
         return true;
     }
 
