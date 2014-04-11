@@ -60,13 +60,13 @@ public class MainActivity extends Activity {
 
         if (strNpm.equals("")) {
             message = "Please insert NPM!";
-            toast = Toast.makeText(ctx, message, Toast.LENGTH_LONG);
+            toast = Toast.makeText(ctx, message, Toast.LENGTH_SHORT);
             toast.show();
         } else {
             //201143579091
             if (strNpm.length() < 12) {
                 message = "Not Valid NPM!";
-                toast = Toast.makeText(ctx, message, Toast.LENGTH_LONG);
+                toast = Toast.makeText(ctx, message, Toast.LENGTH_SHORT);
                 toast.show();
             } else {
                 Intent intent = new Intent(this, MenuNilaiActivity.class);
